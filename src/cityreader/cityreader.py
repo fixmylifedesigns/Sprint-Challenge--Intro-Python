@@ -23,9 +23,6 @@ class City:
             self.lat = lat
             self.lon = lon
 
-      def __repr__(self):
-            return f"{self.name},{self.lat},{self.lon}"
-
 
 cities = []
 
@@ -35,11 +32,12 @@ def cityreader(cities=[]):
   # TODO Implement the functionality to read from the 'cities.csv' file
   # For each city record, create a new City instance and add it to the
   # `cities` list
-  with open('cities.csv', newline='') as csvfile:
-    reader = csv.reader(csvfile, delimiter= '', quotechar = "|")
+  path = r"C:\Users\ijdir\OneDrive\Documents\lambdaschool\week 21\Sprint-Challenge--Intro-Python\src\cityreader\cities.csv"
+  with open( path , newline='') as file:
+    reader = csv.reader(file)
 
     for row in reader:
-        new_city = City(row[0], float(row[3]), float(row[4]))
+        new_city = City(str(row[0]), str(row[3]), str(row[4]))
         cities.append(new_city)
 
     return cities
@@ -48,7 +46,7 @@ cityreader(cities)
 
 # Print the list of cities (name, lat, lon), 1 record per line.
 for c in cities:
-    print(c)
+    print(f"{c.name}, {c.lat}, {c.lon}")
 
 # STRETCH GOAL!
 #
