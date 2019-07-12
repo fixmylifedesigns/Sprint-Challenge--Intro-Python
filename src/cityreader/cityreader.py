@@ -35,9 +35,10 @@ def cityreader(cities=[]):
   path = r"C:\Users\ijdir\OneDrive\Documents\lambdaschool\week 21\Sprint-Challenge--Intro-Python\src\cityreader\cities.csv"
   with open( path , newline='') as file:
     reader = csv.reader(file)
-
+    #next to skip first line
+    next(reader)
     for row in reader:
-        new_city = City(str(row[0]), str(row[3]), str(row[4]))
+        new_city = City(str(row[0]), float(row[3]), float(row[4]))
         cities.append(new_city)
 
     return cities

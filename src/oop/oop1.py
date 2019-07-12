@@ -25,30 +25,30 @@
 
 # class FlightVehicle(Vehicle):
 #     def __init__(self, name, type, model):
-#         super().__init__(self, name, type)
+#         super().__init__(name, type)
 #         self.model = model
 
 # class Starship(FlightVehicle):
 #     def __init__(self, name, type, model):
-#         super().__init__(self,name,type,model)
+#         super().__init__(name,type,model)
 
 # class Airplane(FlightVehicle):
 #     def __init__(self, name, type, model):
-#         super().__init__(self,name,type,model)
+#         super().__init__(name,type,model)
 
 # class GroundVehicle(Vehicle):
 #     def __init__(self, name, type, model, number_of_wheels):
-#         super().__init__(self, name, type)
+#         super().__init__(name, type)
 #         self.model = model
 #         self.number_of_wheels = number_of_wheels
 
 # class Car(GroundVehicle):
 #     def __init__(self, name, type, model, number_of_wheels):
-#         super().__init__(self, name, type, model, number_of_wheels)
+#         super().__init__(name, type, model, number_of_wheels)
 
 # class Motorcycle(GroundVehicle):
 #     def __init__(self, name, type, model, number_of_wheels):
-#         super().__init__(self, name, type, model, number_of_wheels)
+#         super().__init__(name, type, model, number_of_wheels)
 
 class Vehicle:
     	pass
